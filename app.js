@@ -37,3 +37,38 @@ console.log(AGES);
 // console.log(OBJ1); // o/p Object {age: 30} again same thing. We are not changing reference only the value.
 
 
+/*
+* Hoisting:
+* Hoisting doesnt work in es6
+*
+* */
+
+/*age = 30;
+console.log(age);
+let age; // o/p => app.js:46 Uncaught ReferenceError: age is not defined
+ */
+
+// While in case of using var this will work. See Examnple:
+/*age = 30;
+console.log(age);
+var age; // o/p => 30
+ */
+
+// Hoisting another example:
+
+/*function doSomeThing () {
+    console.log(age);
+}
+let age = 30; doSomeThing(); // o/p 30
+ */
+
+/*
+function doSomeThing () {
+ console.log(age);
+ }
+ doSomeThing(); let age = 30;  // o/p Uncaught ReferenceError: age is not defined
+ */
+
+/*
+* ++++++++ Bottom line is declare first in ES6 then use otherwise it will give us error
+* */
