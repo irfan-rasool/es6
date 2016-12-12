@@ -72,3 +72,56 @@ function doSomeThing () {
 /*
 * ++++++++ Bottom line is declare first in ES6 then use otherwise it will give us error
 * */
+
+/*
+* New way to write functions:
+* */
+/*var doSomeThing = () => console.log(age);
+let age = 30; doSomeThing();   // o/p  30*/
+
+// with one line and one param:
+// var doSomeThing = age => console.log(age);
+// doSomeThing(40);   // o/p  40
+
+// with one line and two param:
+// var doSomeThing = (age, name) => console.log(age, name);
+// doSomeThing(40, 'irfan');   // o/p  40 "irfan"
+
+// destructring:
+
+// objec example
+/*function  getValues() {
+    return {
+        age : 32,
+        name : 'irfan rasool'
+    }
+}
+
+let { age , name} = getValues() ;
+console.log(age, name); // o.p => 32 "irfan rasool"
+*/
+
+
+// array example
+/*function  getValues() {
+    return [32, 'irfan rasool'];
+ }
+
+ let [age , name] = getValues() ;
+ console.log(age, name); // o.p => 32 "irfan rasool"
+ */
+
+// Error case:
+// array example
+/*function  getValues() {
+    return {
+        age : 32,
+        name : 'irfan rasool'
+    }
+}
+
+let [age , name] = getValues() ;
+console.log(age, name); // o.p => app.js:123 Uncaught TypeError: getValues is not a function because we are returning
+// object and assigning as like array
+/*
+
